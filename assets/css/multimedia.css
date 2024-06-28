@@ -165,61 +165,66 @@ input:-webkit-autofill:active {
   -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
   -webkit-transition-delay: 9999s;
 }
-
-.galery {
-  display: flex;
-
-  height: 30rem;
-}
-.galery img {
-  width: 0;
-  flex-grow: 1;
-  object-fit: cover;
-  opacity: 0.6;
-  transition: 0.5s ease;
-}
-.galery img:hover {
-  cursor: crosshair;
-  width: 29rem;
-  opacity: 1;
-  filter: contrast(100%);
-}
-.section-banner {
-  background-color: #111d29;
-  height: 88.5vh;
+footer {
+  background-color: var(--black);
   display: flex;
   flex-direction: column;
-}
-.logo-banner {
-  margin: auto;
-  width: 500px;
-}
-h2 {
-  font-family: "utility";
-  font-weight: bold;
-  color: var(--title);
-  font-size: 9.375rem;
-}
-.section-info {
-  padding: 52px;
-  display: flex;
-  flex-direction: column;
-  gap: 52px;
-}
-.content {
-  display: flex;
   justify-content: center;
   align-items: center;
-  gap: 42px;
+  padding: 24px;
 }
-.content div {
-  width: 40%;
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+.title-section {
+  position: absolute;
+}
+.title-section div {
+  color: var(--white);
+  background-color: var(--red);
+  width: 65%;
+  height: 100%;
+  padding: 42px;
+}
+.title-section p {
+  text-align: justify;
+  margin-bottom: 12px;
+}
+h1 {
+  font-family: "utility";
+  font-weight: bold;
+  font-size: 150px;
+}
+video {
+  position: absolute;
+  width: 700px;
+  top: 40px;
+  left: 800px;
+}
+#text-conatiner {
+  width: 60%;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin-left: 42px;
 }
-.content p {
-  text-align: justify;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 80px;
+
+  padding: 60px 100px;
+  margin-top: 500px;
+}
+.grid-item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 .btn-info {
   background: var(--red);
@@ -228,32 +233,19 @@ h2 {
   padding: 20px;
   border: none;
   width: fit-content;
+  margin: auto;
   cursor: pointer;
 }
 .btn-info:hover {
   background-color: var(--black);
   transition: 0.3s;
 }
-.section-comment {
+
+.btn-section {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  width: 86%;
-  margin: auto;
-}
-.comment {
-  display: flex;
-  background-color: var(--red);
-  color: var(--white);
-  font-size: 0.8rem;
-  width: 250px;
-  border-radius: 18px;
-  padding: 8px 20px;
-  align-items: center;
-  gap: 22px;
-}
-.img-info {
-  width: 600px;
-  height: 550px;
+  justify-content: center;
+  padding-bottom: 38px;
 }
 .download-secton {
   background-color: var(--black-ligth);
@@ -272,18 +264,4 @@ h2 {
 .download-secton p:hover {
   color: var(--red);
   transition: 0.3s;
-}
-footer {
-  background-color: var(--black);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 24px;
-}
-a:link,
-a:visited,
-a:active {
-  text-decoration: none;
-  color: inherit;
 }
